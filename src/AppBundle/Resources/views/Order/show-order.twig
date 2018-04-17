@@ -1,0 +1,14 @@
+{# assuming we have a layout to extends #}
+
+{% block title %}{{ blog.title }}{% endblock %}
+
+{% block body %}
+    <div id="order">
+        <header>
+            <h2>Commande n°{{ order.order_id }}</h2>
+        </header>
+        <p>
+            {% include 'billing-address' with {'billingAddress' : order.billing_address} %}
+        </p>
+    </div>
+{% endblock %}

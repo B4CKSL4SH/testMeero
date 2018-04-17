@@ -1,0 +1,12 @@
+{# assuming we have a layout to extends #}
+
+{% block body %}
+    <div id="order_list">
+        <header>
+            <h1>Liste des commandes</h1>
+        </header>
+        {% for order in orderList %}
+            {% include 'show-order' with {'order' : order} %}
+        {% endfor %}
+    </div>
+{% endblock %}

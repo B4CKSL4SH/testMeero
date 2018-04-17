@@ -1,0 +1,13 @@
+{% block body %}
+    <div id="billing_address">
+        <header>
+            <h2>Adresse de livraison</h2>
+        </header>
+        <p>
+            Nom : {{ billingAddress.billing_lastname }}
+            Email : {{ billingAddress.billing_email }}
+            Adresse : {{ billingAddress.billing_address }}
+            {# Et ainsi de suite pour mettre en forme les infos de BillingAddress #}
+        </p>
+    </div>
+{% endblock %}
